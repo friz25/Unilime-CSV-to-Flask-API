@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div align="center">
+        <table>
+            <h1>
+                {% for product in products %}
+                    <h2>{{titles[loop.index]}}</h2>
+                    {{product | safe}}
+                {% endfor %}
+            </h1>
+            <br>
+            <h1>
+                {% for review in reviews %}
+                    <h2>{{titles[loop.index]}}</h2>
+                    {{review | safe}}
+                {% endfor %}
+            </h1>
+        </table>
+    </div>
+</body>
+</html>
